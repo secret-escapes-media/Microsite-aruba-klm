@@ -1,0 +1,24 @@
+# Site settings
+title: Aruba
+client:
+  name: Aruba Tourism Authority
+  link: https://www.aruba.com/uk
+core-se-link: https://www.secretescapes.com/current-sales
+description: >
+  Pulverfeine, weiße Sandstrände, kristallklares Meer und die meisten Sonnenstunden der Karibik: Willkommen auf Aruba, eine Insel die glücklich macht. Hier im Süden der Karibik und außerhalb des Hurrikangebiets erwarten Sie neben traumhaften Stränden eindrucksvolle Naturwunder, warmherzige Inselbewohner und Jahresdurchschnittstemperaturen von 28 °C. Von Europa aus erreichen Sie das paradiesische Eiland schon in weniger als 10 Flugstunden, z.B. mit KLM.
+
+# file paths
+url:     "http://mp.secretescapes.com" # the base hostname & protocol for your site
+baseurl: "/de/aruba" # the subpath of your site, e.g. /blog/
+img:     "/de/aruba/_assets/img"
+css:     "/de/aruba/_assets/css"
+js:      "/de/aruba/_assets/js"
+
+
+# Build settings
+markdown: kramdown
+exclude: [node_modules, gulpfile.js, package.json, package-lock.json, js/script.js]
+keep_files: [_assets]
+sass:
+    sass_dir: css
+    style: compressed

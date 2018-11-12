@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="vpad--xl bg--light">
+  <div class="container">
+    <div class="width width--lg text--center text--lg">
+      <p>{{page.intro}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="vpad--xl">
+  <div class="container">
+    {% for topic in page.topics %}
+      <div class="bob {% cycle '', ' bob--swap' %}">
+        <div class="bob__img">
+          <div class="bg-img bg-img--3-2" style="background-image: url('{{site.img}}/content/{{page.id}}/{{topic.id}}.jpg');">
+            {% if topic.link %}<a class="bg-img__link" href="{{topic.link}}"></a>{% endif %}
+          </div>
+        </div>
+        <div class="bob__text">
+          <h2 class="title title--md title--green">{{topic.title}}</h2>
+          <p>{{topic.content}}</p>
+          {% if topic.link %}
+            <div class="space--sm"></div>
+            <a href="{{topic.link}}" class="btn btn--sm btn--outline btn--outline-green">Entdecke mehr</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
