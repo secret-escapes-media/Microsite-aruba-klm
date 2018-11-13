@@ -17,14 +17,14 @@
   &--orange { background-color: $orange;
     &:hover { background-color: $orange-dark; }
   }
-  &--blue { background-color: #2ad0d4;
-    &:hover { background-color: darken(#2ad0d4,5); }
+  &--blue { background-color: #e74343;
+    &:hover { background-color: darken(#e74343,5); }
   }
-  &--green { background-color: #008a78;
-    &:hover { background-color: darken(#008a78,5); }
+  &--green { background-color: #e74343;
+    &:hover { background-color: darken(#e74343,5); }
   }
-  &--pink { background-color: #e7435e;
-    &:hover { background-color: darken(#e7435e,5); }
+  &--pink { background-color: #e74343;
+    &:hover { background-color: darken(#e74343,5); }
   }
   &--outline {
     color: inherit;
@@ -51,11 +51,11 @@
     }
   }
   &--outline-green {
-    &:before { border-color: #008a78; }
+    &:before { border-color: #e74343; }
     &:hover {
       color: $white;
-      background-color: #008a78;
-      &:before { border-color: #008a78; }
+      background-color: #e74343;
+      &:before { border-color: #e74343; }
     }
   }
   &--outline-pink{
@@ -67,11 +67,11 @@
     }
   }
   &--outline-blue{
-    &:before { border-color: #2ad0d4; }
+    &:before { border-color: #e74343; }
     &:hover {
       color: $white;
-      background-color: #2ad0d4;
-      &:before { border-color: #2ad0d4; }
+      background-color: #e74343;
+      &:before { border-color: #e74343; }
     }
   }
 }

@@ -22,10 +22,6 @@ layout: default
         <div class="bob__text">
           <h2 class="title title--md title--green">{{topic.title}}</h2>
           <p>{{topic.content}}</p>
-          {% if topic.link %}
-            <div class="space--sm"></div>
-            <a href="{{topic.link}}" class="btn btn--sm btn--outline btn--outline-green">Entdecke mehr</a>
-          {% endif %}
         </div>
       </div>
     {% endfor %}
