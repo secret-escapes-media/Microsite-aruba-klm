@@ -17,12 +17,6 @@
   &--orange { background-color: $orange;
     &:hover { background-color: $orange-dark; }
   }
-  &--blue { background-color: #e74343;
-    &:hover { background-color: darken(#e74343,5); }
-  }
-  &--green { background-color: #e74343;
-    &:hover { background-color: darken(#e74343,5); }
-  }
   &--pink { background-color: #e74343;
     &:hover { background-color: darken(#e74343,5); }
   }
@@ -50,28 +44,12 @@
       &:before { border-color: $orange; }
     }
   }
-  &--outline-green {
-    &:before { border-color: #e74343; }
-    &:hover {
-      color: $white;
-      background-color: #e74343;
-      &:before { border-color: #e74343; }
-    }
-  }
   &--outline-pink{
     &:before { border-color: #e7435e; }
     &:hover {
       color: $white;
       background-color: #e7435e;
       &:before { border-color: #e7435e; }
-    }
-  }
-  &--outline-blue{
-    &:before { border-color: #e74343; }
-    &:hover {
-      color: $white;
-      background-color: #e74343;
-      &:before { border-color: #e74343; }
     }
   }
 }

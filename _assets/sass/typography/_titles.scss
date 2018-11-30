@@ -27,11 +27,7 @@
     &--xxs    { font-size: $s2; }
     &--xxxs   { font-size: $s1; }
   }
-
-  &--pink  { color: #e74343; }
-  &--green { color: #e74343; }
-  &--blue  { color: #2ad0d4; }
-  &--color { color: #e74343; }
+  &--pink { color: #e74343; }
 
 }
 
@@ -84,7 +80,6 @@
 .script-title {
   // custom banner headline
   font-family: $font-title-02;
-  // font-size: $s5;
   line-height: .9;
 }
 
@@ -92,16 +87,33 @@
 .banner-title {
   // custom banner headline
   font-family: $font-title-02;
-  font-size: $s13;
   line-height: .9;
-  &--overview { font-size: $s15; }
-  &--competition { font-size: $s10; }
+  font-size: $s9;
+  @include bp($sm){ font-size: $s10; }
+  @include bp($md){ font-size: $s11; }
+  @include bp($lg){ font-size: $s13; }
+  &--overview {
+    font-size: $s11;
+    @include bp($sm){ font-size: $s12; }
+    @include bp($md){ font-size: $s13; }
+    @include bp($lg){ font-size: $s15; }
+  }
 }
 
 .banner-title-sub {
   font-family: $font-title-01;
-  font-size: $s6;
   font-weight: 500;
   letter-spacing: -.04rem;
   line-height: 1;
+  font-size: $s3;
+  @include bp($sm){ font-size: $s4; }
+  @include bp($md){ font-size: $s5; }
+  @include bp($lg){ font-size: $s6; }
+  &--sm {
+    font-weight: 400;
+    font-size: $s2;
+    @include bp($sm){ font-size: $s3; }
+    @include bp($md){ font-size: $s4; }
+    @include bp($lg){ font-size: $s5; }
+  }
 }

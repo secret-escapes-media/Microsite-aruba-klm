@@ -73,10 +73,10 @@ highlights:
 <div class="vpad--xxl">
   <div class="container">
     <div class="text--center">
-      <h2 class="title title--xl title--color">Aruba Top 10</h2>
+      <h2 class="title title--xl title--pink">Aruba Top 10</h2>
     </div>
     <div class="space--xl"></div>
-    <div class="row row--4-4-4">
+    <div class="row row--sm-6-6 row--lg-4-4-4">
       {% assign highlights = page.highlights | sort: "number" | reverse %}
       {% for highlight in highlights %}
         <div class="col{% if highlight.number <= 4 %} col--6{% endif %}">
