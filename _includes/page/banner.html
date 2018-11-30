@@ -7,9 +7,20 @@
     {% else %}
       <div class="container container--no-padding text--center">
         <div class="width width--xxl">
-          {% if page.banner.title-sup %}<h2 class="banner-title-sub">{{page.banner.title-sup}}</h2>{% endif %}
-          <h1 class="banner-title{% if page.id=="overview" %} banner-title--overview{% endif %} ">{% if page.banner.title %}{{page.banner.title}}{% else %}{{page.title}}{% endif %}</h1>
-          {% if page.banner.title-sub %}<h2 class="banner-title-sub">{{page.banner.title-sub}}</h2>{% endif %}
+          {% if page.id == "offers" %}
+            <h1 class="banner-title">
+              {% include offer/variables.html %}
+              {% if only-one-offer %}
+                Aruba-Deal des Monats
+              {% else %}
+                Aruba-Deals des Monats
+              {% endif %}
+            </h1>
+          {% else %}
+            {% if page.banner.title-sup %}<h2 class="banner-title-sub">{{page.banner.title-sup}}</h2>{% endif %}
+            <h1 class="banner-title{% if page.id=="overview" %} banner-title--overview{% endif %}">{% if page.banner.title %}{{page.banner.title}}{% else %}{{page.title}}{% endif %}</h1>
+            {% if page.banner.title-sub %}<h2 class="banner-title-sub">{{page.banner.title-sub}}</h2>{% endif %}
+          {% endif %}
         </div>
       </div>
     {% endif %}

@@ -16,24 +16,36 @@
     </div>
 
     {% unless page.id == "offers" or page.id == "competition" %}
+      {% include offer/variables.html %}
       <div class="vpad--xxl bg--light-grey">
         <div class="container">
           <div class="text--center">
-            <h3 class="title title--xl">Angebote</h3>
+            <h3 class="title title--xl">
+              {% if only-one-offer %}
+                Aruba-Deal des Monats
+              {% else %}
+                Aruba-Deals des Monats
+              {% endif %}
+            </h3>
             <div class="space--lg"></div>
           </div>
-          {% include offer/variables.html %}
-          <div class="row row--xl-6-6 row--gutters-lg">
+          <div class="row row--gutters-lg {% unless only-one-offer %} row--xl-6-6{% endunless %}">
             {% for offer in offers-by-price limit:2 %}
               <div class="col">
-                {% include offer/offer.html %}
+                {% if only-one-offer %}
+                  {% include offer/offer-lg.html %}
+                {% else %}
+                  {% include offer/offer.html %}
+                {% endif %}
               </div>
             {% endfor %}
           </div>
-          <div class="text--center">
-            <div class="space--xl"></div>
-            <a href="{{site.baseurl}}/angebote" class="btn btn--orange btn--lg">Alle Angebote sehen</a>
-          </div>
+          {% unless only-one-offer %}
+            <div class="text--center">
+              <div class="space--xl"></div>
+              <a href="{{site.baseurl}}/angebote" class="btn btn--orange btn--lg">Alle Angebote sehen</a>
+            </div>
+          {% endunless %}
         </div>
       </div>
     {% endunless %}

@@ -7,6 +7,7 @@ $offer-max-width: 600px;
   position: relative;
   width: 100%;
   max-width: $offer-max-width;
+
   margin-left: auto;
   margin-right: auto;
   &__link {
@@ -137,6 +138,18 @@ $offer-max-width: 600px;
     &__bottom-right { align-self: center; }
     &__saved        { min-width: 130px; } // bit of a magic number, basically keeps the saved label & percent on the same line
     &__saved-label  { display: inline-block; }
+  }
+
+  &--lg {
+    max-width: $xxl;
+    ul {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .offer__bottom {
+      margin-top: $s3;
+      border-top: 1px solid $grey-lighter;
+    }
   }
 
   // dark offer card styles

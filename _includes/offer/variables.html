@@ -8,3 +8,10 @@
 
 <!-- offers by price -->
 {% assign offers-by-price = offers | sort: 'price' %}
+
+<!-- Is there only one offer on the site? -->
+{% if offers.size == 1 %}
+  {% assign only-one-offer = true %}
+{% else %}
+  {% assign only-one-offer = false %}
+{% endif %}

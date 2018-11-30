@@ -1,10 +1,14 @@
 {% include offer/variables.html %}
 
-<div class="container vpad--xxxl">
-  <div class="row row--xl-6-6 row--gutters-lg">
+<div class="container vpad--xxl">
+  <div class="row row--gutters-lg {% unless only-one-offer %} row--xl-6-6{% endunless %}">
     {% for offer in offers-by-price %}
       <div class="col">
-        {% include offer/offer.html %}
+        {% if only-one-offer %}
+          {% include offer/offer-lg.html %}
+        {% else %}
+          {% include offer/offer.html %}
+        {% endif %}
       </div>
     {% endfor %}
   </div>
